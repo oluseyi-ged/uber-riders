@@ -5,9 +5,12 @@ import tw from "tailwind-react-native-classnames"
 import { GOOGLE_MAPS_APIKEY } from "@env"
 import { setDestination } from "../slices/navSlice"
 import { useDispatch } from "react-redux"
+import { useNavigation } from "@react-navigation/native"
+import RideOptions from "./RideOptions"
 
 const NavigateCard = () => {
   const dispatch = useDispatch()
+  const navigation = useNavigation()
 
   return (
     <SafeAreaView style={tw`bg-white flex-1`}>
@@ -24,6 +27,7 @@ const NavigateCard = () => {
                   description: data.description,
                 })
               )
+              navigation.navigate("RideOptions")
             }}
             fetchDetails={true}
             returnKeyType={"search"}
