@@ -7,6 +7,7 @@ import { setDestination } from "../slices/navSlice"
 import { useDispatch } from "react-redux"
 import { useNavigation } from "@react-navigation/native"
 import RideOptions from "./RideOptions"
+import NavFavorites from "./NavFavorites"
 
 const NavigateCard = () => {
   const dispatch = useDispatch()
@@ -41,6 +42,7 @@ const NavigateCard = () => {
             debounce={400}
           />
         </View>
+        <NavFavorites />
       </View>
     </SafeAreaView>
   )
