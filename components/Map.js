@@ -62,7 +62,7 @@ const Map = () => {
             latitude: destination.location.lat,
             longitude: destination.location.lng,
           }}
-          title="Ride From"
+          title="Destination"
           description={destination.description}
           identifier="destination"
         />
